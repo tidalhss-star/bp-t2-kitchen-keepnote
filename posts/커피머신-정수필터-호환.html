@@ -1,15 +1,432 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>커피머신 정수필터 호환 실패하는 이유</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커피머신 정수필터 호환 실패하는 이유</title>
   <link rel="canonical" href="https://kitchen.keepnote.shop/posts/커피머신-정수필터-호환.html">
+  
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #1a1a1a;
+            --color-bg: #121212;
+            --color-text: #fafaf5;
+            --color-text-muted: #a0a095;
+            --color-accent: #366e2b;
+            --color-glass: rgba(255, 255, 255, 0.03);
+            --color-glass-border: rgba(255, 255, 255, 0.08);
+            --font-serif: 'Playfair Display', 'Noto Serif KR', serif;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+            overflow-x: hidden;
+        }
+
+        /* Layout & Structure */
+        .t-ico-caz5 {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Navigation */
+        .v-img-adfh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-glass-border);
+        }
+
+        .t-item-hzph-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .q-img-spda {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-text);
+            text-decoration: none;
+        }
+
+        .v-head-3tjb {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 16px;
+            z-index: 1002;
+        }
+
+        .v-head-3tjb span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+
+        /* Overlay Menu */
+        .m-side-02b7-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-bg);
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        .m-side-02b7-overlay.active {
+            opacity: 0.98;
+            visibility: visible;
+        }
+
+        .m-side-02b7-links {
+            list-style: none;
+            text-align: center;
+        }
+
+        .m-side-02b7-links li {
+            margin: 32px 0;
+        }
+
+        .m-side-02b7-links a {
+            font-size: 2rem;
+            color: var(--color-text);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+        }
+
+        .m-side-02b7-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero Section */
+        .v-side-125p {
+            padding: 180px 0 100px 0;
+            position: relative;
+        }
+
+        .v-side-125p-badge {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-accent);
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        /* Handcrafted Indie Accent: Tilted Title & Custom Underline */
+        .k-nav-ofag-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            line-height: 1.2;
+            font-weight: 400;
+            margin-bottom: 32px;
+            transform: rotate(-1.2deg);
+            display: inline-block;
+            transform-origin: left center;
+        }
+
+        .x-img-76wy-line {
+            display: block;
+            width: 100%;
+            max-width: 450px;
+            height: 2px;
+            border-bottom: 2px dashed var(--color-accent);
+            margin-top: 16px;
+        }
+
+        .v-side-125p-desc {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            max-width: 680px;
+            margin-top: 40px;
+        }
+
+        /* Asymmetric Layout Sections */
+        .k-card-scey {
+            padding: 80px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        /* Asymmetric padding to mimic handcrafted imperfection */
+        .x-list-932g-left {
+            padding-left: 5%;
+            padding-right: 15%;
+        }
+
+        .x-list-932g-right {
+            padding-left: 15%;
+            padding-right: 5%;
+        }
+
+        .k-card-scey-title {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            color: var(--color-text);
+            position: relative;
+        }
+
+        .k-card-scey-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            background-color: var(--color-accent);
+            margin-top: 12px;
+        }
+
+        /* Glassmorphism Cards */
+        .m-txt-25cm-card {
+            background: var(--color-glass);
+            border: 1px solid var(--color-glass-border);
+            padding: 40px;
+            border-radius: 4px;
+            margin-bottom: 32px;
+            transition: border-color 0.3s;
+        }
+
+        .m-txt-25cm-card:hover {
+            border-color: var(--color-accent);
+        }
+
+        .k-wrap-gm74-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .k-wrap-gm74-title {
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        /* Text Styles */
+        p {
+            margin-bottom: 24px;
+            color: var(--color-text-muted);
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        p strong {
+            color: var(--color-text);
+        }
+
+        /* Sharp Buttons */
+        .v-main-ymz5 {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--color-text);
+            border: 1px solid var(--color-text);
+            padding: 14px 28px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 4px; /* subtle as per layout rules */
+        }
+
+        .v-main-ymz5:hover {
+            background-color: var(--color-text);
+            color: var(--color-bg);
+        }
+
+        /* Table Style */
+        .r-img-5rld-wrapper {
+            overflow-x: auto;
+            margin: 40px 0;
+        }
+
+        .r-img-5rld {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .r-img-5rld th, .r-img-5rld td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--color-glass-border);
+        }
+
+        .r-img-5rld th {
+            font-weight: 600;
+            color: var(--color-text);
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .r-img-5rld td {
+            color: var(--color-text-muted);
+        }
+
+        /* FAQ Accordion */
+        .v-card-umiw-item {
+            border-bottom: 1px solid var(--color-glass-border);
+            padding: 24px 0;
+        }
+
+        .v-card-umiw-trigger {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            color: var(--color-text);
+            font-size: 1.15rem;
+            font-family: var(--font-serif);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .v-card-umiw-content {
+            margin-top: 16px;
+            color: var(--color-text-muted);
+            display: none;
+            padding-right: 40px;
+        }
+
+        .v-card-umiw-item.active .v-card-umiw-content {
+            display: block;
+        }
+
+        .v-card-umiw-icon {
+            transition: transform 0.3s;
+        }
+
+        .v-card-umiw-item.active .v-card-umiw-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Author Block */
+        .t-body-psrd-section {
+            background: var(--color-glass);
+            border-top: 1px solid var(--color-glass-border);
+            padding: 60px 0;
+            margin-top: 80px;
+        }
+
+        .t-body-psrd-card {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .t-body-psrd-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .t-body-psrd-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-accent);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-text);
+        }
+
+        .t-body-psrd-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--color-text);
+        }
+
+        .t-body-psrd-info p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .r-side-o7qp {
+            padding: 48px 0;
+            border-top: 1px solid var(--color-glass-border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            letter-spacing: 0.1em;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .v-side-125p {
+                padding: 120px 0 60px 0;
+            }
+            .x-list-932g-left, .x-list-932g-right {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .k-card-scey {
+                padding: 48px 0;
+            }
+        }
+    </style>
   <meta property="og:url" content="https://kitchen.keepnote.shop/posts/커피머신-정수필터-호환.html">
   <meta property="og:title" content="커피머신 정수필터 호환 실패하는 이유">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
+  <div class="container">
+    <header class="v-img-adfh">
+        <div class="t-item-hzph-container">
+            <a href="/" class="q-img-spda">Keepnote Kitchen</a>
+            <button class="v-head-3tjb" aria-label="메뉴 열기" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <main>
 <h1>커피머신 정수필터, 헤드 규격 안 맞으면 그냥 쓰레기통행입니다</h1>
 <p>커피머신용 정수필터를 바꿀 때 가장 자주 하는 실수가 바로 '대충 호환되겠지' 하며 결제하는 일입니다. 정수 장치는 필터를 꽂는 헤드와 필터 자체로 구성되는데, 제조사마다 물리적 연결 규격이 완전히 다릅니다. 에버퓨어, 플럭스, 3M 등 제조사 독자 잠금 구조 때문에 헤드와 필터 브랜드가 안 맞으면 조립 자체가 안 됩니다. 일부 호환품이 나오지만 미세한 오링 두께 차이로 물이 새 주방 바닥을 적시는 누수 사고가 빈번하게 터집니다.</p>
 <p>압력과 유량 역시 골칫거리입니다. 상업용 커피머신은 특정 수압이 보장되어야 추출 장치가 제 성능을 냅니다. 필터 유량이 머신 요구량보다 낮으면 펌프가 제 힘을 못 쓰고 소음이 나며, 심하면 장비가 손상됩니다. 사용자 후기를 보면 교체 후 추출 압력이 떨어졌다는 불만이 주기적으로 보이는데, 대부분 머신 제원에 맞지 않는 너무 작은 규격의 필터를 억지로 끼워 써서 생기는 일입니다.</p>
@@ -26,5 +443,7 @@
 
 <p>호환 여부로 문의가 많은 플럭스 FLUUX H17-EPS2 카본 정수 필터 커피머신 모델은 49,900원(2026-08-12 기준)에 판매되고 있습니다. 이 제품은 탄소를 주원료로 하는 정수 방식이므로 본인 매장이나 가정의 수질 환경이 스케일 억제를 우선으로 해야 하는 환경인지부터 따져봐야 합니다. 또한 가지고 있는 필터 헤드가 플럭스 독자 규격을 정상적으로 지원하는지 사전에 제조사 사양서를 대조해 보아야 반품 배송비를 아낄 수 있습니다.</p>
 <p>필터의 수명이 다했다는 신호는 굳이 테스터를 안 써도 물 맛과 추출 상태로 바로 티가 납니다. 커피를 내릴 때 크레마가 전보다 금방 꺼지거나 물에서 미세한 수돗물 소독약 냄새가 나면 즉시 교체 주기입니다. 물 사용량이 거의 없었다 하더라도 일단 물이 들어간 필터는 내부에서 세균이 자라기 때문에 최대 1년을 넘기지 말고 새 필터로 교체해야 기계와 인체에 해가 없습니다.</p>
+    </main>
+  </div>
 </body>
 </html>
