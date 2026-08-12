@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메모 — 식품 보관 조건 정리</title>
+    <meta name="description" content="실무 담당자를 위한 식품 보관 조건 정리 가이드. 실온, 냉장, 냉동의 명확한 기준과 보관 실패 신호, 대규모 행사 준비 시 식자재 관리 프로토콜을 상세히 알아봅니다.">
+    <meta name="keywords" content="식품 보관 조건 정리, 식자재 보관 기준, 냉장 보관 온도, 실온 보관 기준, 부패 신호, 행사 식자재 관리">
+    <link rel="canonical" href="https://kitchen.keepnote.shop/notes.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="메모 — 식품 보관 조건 정리">
+    <meta property="og:description" content="실무 담당자를 위한 식품 보관 조건 정리 가이드. 실온, 냉장, 냉동의 명확한 기준과 보관 실패 신호, 대규모 행사 준비 시 식자재 관리 프로토콜을 상세히 알아봅니다.">
+    <meta property="og:url" content="https://kitchen.keepnote.shop/notes.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500;700&family=Sansita:ital,wght@0,400;1,700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg: #f9f8f6;
+            --color-surface: #ffffff;
+            --color-text-primary: #1a1a1a;
+            --color-text-secondary: #5a5a5a;
+            --color-accent: #8c765c;
+            --color-accent-light: #f3efe9;
+            --color-border: #e3dec3;
+            --font-serif: 'Noto Serif KR', serif;
+            --font-sans: 'Inter', sans-serif;
+            --spacing-unit: 8px;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout & Structure */
+        .t-ico-caz5 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 calc(var(--spacing-unit) * 3);
+        }
+
+        /* Header Navigation */
+        .v-head-3tjb {
+            border-bottom: 1px solid var(--color-border);
+            background-color: var(--color-surface);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .v-head-3tjb .t-ico-caz5 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .v-img-adfh {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--color-text-primary);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        .t-item-hzph-container {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 4);
+            list-style: none;
+        }
+
+        .t-item-hzph-container a {
+            text-decoration: none;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .t-item-hzph-container a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hamburger Menu (Responsive) */
+        .q-img-spda {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .q-img-spda span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--color-text-primary);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .editorial-hero {
+            padding: calc(var(--spacing-unit) * 12) 0 calc(var(--spacing-unit) * 8);
+            border-bottom: 1px solid var(--color-border);
+            background-color: var(--color-surface);
+        }
+
+        .editorial-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            font-weight: 500;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            word-break: keep-all;
+        }
+
+        .editorial-hero p {
+            font-size: 1.15rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            font-weight: 300;
+        }
+
+        /* Editorial Grid Layout */
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: calc(var(--spacing-unit) * 8);
+            padding: calc(var(--spacing-unit) * 8) 0;
+        }
+
+        .editorial-main {
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 8);
+        }
+
+        .editorial-sidebar {
+            border-left: 1px solid var(--color-border);
+            padding-left: calc(var(--spacing-unit) * 4);
+        }
+
+        /* Article Styles */
+        .article-section {
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        .article-section h2 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--color-accent);
+            border-bottom: 2px solid var(--color-text-primary);
+            padding-bottom: calc(var(--spacing-unit) * 1.5);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .article-section p {
+            font-size: 1.05rem;
+            color: var(--color-text-secondary);
+            text-align: justify;
+        }
+
+        .article-section p strong {
+            color: var(--color-text-primary);
+            font-weight: 600;
+        }
+
+        /* Callout Box */
+        .editorial-callout {
+            background-color: var(--color-accent-light);
+            border-left: 4px solid var(--color-accent);
+            padding: calc(var(--spacing-unit) * 4);
+            margin: calc(var(--spacing-unit) * 4) 0;
+        }
+
+        .editorial-callout p {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--color-text-primary);
+        }
+
+        /* Table Style */
+        .data-table-container {
+            overflow-x: auto;
+            margin: calc(var(--spacing-unit) * 4) 0;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .data-table th {
+            background-color: var(--color-accent-light);
+            color: var(--color-text-primary);
+            font-weight: 600;
+            padding: calc(var(--spacing-unit) * 2);
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .data-table td {
+            padding: calc(var(--spacing-unit) * 2);
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+        }
+
+        .data-table tr:hover td {
+            background-color: #fcfbf9;
+        }
+
+        /* Sidebar Widgets */
+        .sidebar-widget {
+            margin-bottom: calc(var(--spacing-unit) * 6);
+        }
+
+        .sidebar-widget h3 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            color: var(--color-text-primary);
+            border-bottom: 1px solid var(--color-text-primary);
+            padding-bottom: calc(var(--spacing-unit) * 1);
+        }
+
+        .sidebar-widget ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 1.5);
+        }
+
+        .sidebar-widget ul li a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .sidebar-widget ul li a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Overlay Menu */
+        .m-side-02b7-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 150;
+        }
+
+        .m-side-02b7-content {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 80%;
+            max-width: 300px;
+            height: 100%;
+            background-color: var(--color-surface);
+            padding: calc(var(--spacing-unit) * 4);
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-text-primary);
+            color: #888;
+            padding: calc(var(--spacing-unit) * 8) 0;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--color-surface);
+        }
+
+        footer .t-ico-caz5 {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: calc(var(--spacing-unit) * 4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .t-item-hzph-container {
+                display: none;
+            }
+
+            .q-img-spda {
+                display: block;
+            }
+
+            .editorial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .editorial-sidebar {
+                border-left: none;
+                padding-left: 0;
+                border-top: 1px solid var(--color-border);
+                padding-top: calc(var(--spacing-unit) * 4);
+            }
+        }
+    </style>
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="v-head-3tjb">
+        <div class="t-ico-caz5">
+            <a href="https://kitchen.keepnote.shop" class="v-img-adfh">KITCHEN NOTE</a>
+            <nav>
+                <ul class="t-item-hzph-container">
+                    <li><a href="https://kitchen.keepnote.shop">홈</a></li>
+                    <li><a href="https://kitchen.keepnote.shop">보관 가이드</a></li>
+                    <li><a href="https://kitchen.keepnote.shop">온도 기준</a></li>
+                    <li><a href="https://kitchen.keepnote.shop">위생 프로토콜</a></li>
+                </ul>
+                <button class="q-img-spda" onclick="toggleMenu()" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Overlay Mobile Menu -->
+    <div id="mobileOverlay" class="m-side-02b7-overlay" onclick="toggleMenu()">
+        <div class="m-side-02b7-content" onclick="event.stopPropagation()">
+            <h2 style="font-family: var(--font-serif); margin-bottom: 20px;">MENU</h2>
+            <a href="https://kitchen.keepnote.shop" style="text-decoration: none; color: var(--color-text-primary); font-size: 1.1rem;">홈</a>
+            <a href="https://kitchen.keepnote.shop" style="text-decoration: none; color: var(--color-text-primary); font-size: 1.1rem;">보관 가이드</a>
+            <a href="https://kitchen.keepnote.shop" style="text-decoration: none; color: var(--color-text-primary); font-size: 1.1rem;">온도 기준</a>
+            <a href="https://kitchen.keepnote.shop" style="text-decoration: none; color: var(--color-text-primary); font-size: 1.1rem;">위생 프로토콜</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="editorial-hero">
+        <div class="t-ico-caz5">
+            <h1>상식이라 착각하는 순간 망한다<br>식품 보관 온도와 부패의 징후들</h1>
+            <p>실온과 상온을 구분하지 못해 식자재를 통째로 쓰레기통에 처박아 본 경험이 있다면, 이 글을 끝까지 읽는 것이 좋다. 실무 현장에서 바로 쓰이는 정확한 온도 기준과 부패 프로토콜.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="t-ico-caz5">
+        <div class="editorial-grid">
+            
+            <!-- Left: Main Article -->
+            <article class="editorial-main">
+                
+                <section class="article-section">
+                    <h2>1. 온도라는 절대적 기준선 : 실온, 상온, 냉장, 냉동의 실체</h2>
+                    <p>솔직히 말해서, 현업에서 일한다는 사람들조차 온도계 하나 제대로 볼 줄 모르는 경우가 수두룩하다. 그냥 '대충 시원한 곳'에 두면 괜찮을 것이라는 안일한 생각이 수백 명의 손님을 응급실로 보내는 지름길이다. 식품위생법이 규정하는 온도는 단순한 권고사항이 아니라 생존을 위한 마지노선이다. 이 선을 넘는 순간 식자재는 독극물로 변하기 시작한다.</p>
+                    <p>가장 많이들 헷갈려하는 <strong>실온(Room Temperature)</strong>과 <strong>상온(Ordinary Temperature)</strong>의 차이부터 짚고 넘어가자. 식품공전 기준에 따르면 <strong>실온은 1~35℃</strong>를 의미하고, <strong>상온은 15~25℃</strong>를 뜻한다. 한여름 가설 천막 아래의 32℃는 법적으로 실온에는 해당하지만, 상온 보관용 초콜릿이나 크림류를 놔두기에는 자살행위와 다름없는 온도다. 이 단순한 단어 차이를 인지하지 못해 행사를 통째로 날려 먹는 기획자들을 나는 숱하게 봐왔다.</p>
+                    <p>냉장과 냉동은 더 엄격하다. <strong>냉장은 0~10℃</strong>, <strong>냉동은 -18℃ 이하</strong>를 철저히 유지해야 한다. 냉장고 문을 3초 이상 열어두는 것만으로도 내부 온도가 순식간에 5℃ 이상 치솟는다는 사실을 아는가? 식자재를 넣고 뺄 때의 동선과 시간까지 철저히 계산하지 않으면, 당신의 냉장고는 그저 미지근한 세균 배양기일 뿐이다.</p>
+                    
+                    <div class="editorial-callout">
+                        <p>"상온 보관하라고 써진 소스류를 30도가 넘는 야외 주방에 방치해 두고 '실온 보관이라 괜찮다'고 우기던 현장 책임자를 본 적이 있다. 그날 저녁 메뉴는 전량 폐기 처리됐다. 무지는 범죄다."</p>
+                    </div>
+                </section>
+
+                <section class="article-section">
+                    <h2>2. 눈감아주지 않는 부패의 신호 : 버려야 할 때를 모르는 이들에게</h2>
+                    <p>식자재가 상했는지 아닌지를 냄새만으로 판별하겠다는 발상 자체가 극히 위험하다. 무색무취의 독소를 내뿜는 식중독균이 얼마나 많은지 안다면 감히 코를 들이밀며 '괜찮은데?'라는 소리는 못 할 것이다. 하지만 육안과 촉각으로 확인할 수 있는 부패의 확실한 실패 신호들은 분명히 존재한다. 이 신호가 포착되면 아까워하지 말고 즉시 폐기 봉투를 열어야 한다.</p>
+                    <p>육류의 경우, 가장 명확한 신호는 <strong>드립(Drip, 육즙 분리) 현상</strong>과 표면의 미끈거림이다. 포장을 뜯었을 때 끈적한 점액질이 묻어나오거나 회색빛으로 변색되었다면 이미 산패가 진행된 것이다. 가금류는 뼈 주변부터 붉은 갈색으로 변하며 불쾌한 신맛이 나기 시작한다. 채소류는 짓무름과 갈변이 시작되면 내부 세포벽이 무너진 상태이므로 세균 번식이 극대화된다. 유제품과 소스류의 분리 현상 역시 단순한 흔들림 때문이 아니라 미생물 활동으로 인한 에멀전 파괴 신호다.</p>
+                    
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>식자재 구분</th>
+                                    <th>적정 보관 온도</th>
+                                    <th>핵심 부패 신호 (즉시 폐기 기준)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>신선 육류 (돈육, 우육)</td>
+                                    <td>0 ~ 5℃ (냉장)</td>
+                                    <td>표면 점액질 형성, 회갈색 변색, 시큼한 악취</td>
+                                </tr>
+                                <tr>
+                                    <td>가금류 (생닭, 생오리)</td>
+                                    <td>-2 ~ 2℃ (신선냉장)</td>
+                                    <td>관절 부위 변색, 시큼하고 톡 쏘는 냄새</td>
+                                </tr>
+                                <tr>
+                                    <td>신선 어패류</td>
+                                    <td>-2 ~ 0℃</td>
+                                    <td>눈동자 탁해짐, 아가미 흑변, 탄력 상실</td>
+                                </tr>
+                                <li>
+                                    <td>유제품 및 소스류</td>
+                                    <td>0 ~ 10℃</td>
+                                    <td>수분 분리(유청 분리), 시큼한 유기산 냄새</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="article-section">
+                    <h2>3. 대규모 행사에서 살아남는 식자재 관리 프로토콜</h2>
+                    <p>수백 명의 인원이 참여하는 대규모 행사나 연회에서는 평소의 관리 방식이 통하지 않는다. 물량이 압도적으로 많기 때문에 한 번의 실수가 도미노처럼 전체 식자재를 오염시키기 때문이다. 가장 먼저 지켜야 할 철칙은 <strong>'교차 오염의 원천 차단'</strong>이다. 조리된 식품과 날것의 식자재는 냉장고 내에서 완벽히 격리되어야 한다. 반드시 조리 식품을 상단에, 날것(육류, 어류)을 하단에 배치해 아래로 액체가 떨어져 오염되는 대참사를 막아야 한다.</p>
+                    <p>또한, 행사 당일 배송된 식자재를 즉시 냉장고에 넣는다고 끝이 아니다. 뜨거운 상태의 식자재를 식히지 않고 대량으로 냉장고에 밀어 넣으면 냉장고 전체 온도가 동반 상승하여 기존에 있던 다른 식자재까지 한꺼번에 망가뜨린다. 반드시 <strong>얼음물 급속 냉각(Chilling)</strong> 단계를 거쳐 품온을 10℃ 이하로 떨어뜨린 후 냉장 보관해야 한다. 선입선출(FIFO)은 귀찮은 작업이 아니라 유통기한 사고를 막는 유일한 방어선이다. 라벨링이 되어 있지 않은 식자재는 그 즉시 쓰레기통으로 가야 마땅하다.</p>
+                </section>
+
+            </article>
+
+            <!-- Right: Sidebar -->
+            <aside class="editorial-sidebar">
+                <div class="sidebar-widget">
+                    <h3>실무자 핵심 요약</h3>
+                    <ul>
+                        <li><a href="https://kitchen.keepnote.shop">· 실온(1~35℃) vs 상온(15~25℃)</a></li>
+                        <li><a href="https://kitchen.keepnote.shop">· 냉장고 문 개폐 시 온도 변화 주의</a></li>
+                        <li><a href="https://kitchen.keepnote.shop">· 육류 표면의 끈적임은 즉시 폐기 대상</a></li>
+                        <li><a href="https://kitchen.keepnote.shop">· 조리 식품은 무조건 날것보다 위 칸에</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3>관련 가이드 문서</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 10px;">
+                        식품의약품안전처 기준에 맞춘 실무 매뉴얼 시리즈를 확인하세요.
+                    </p>
+                    <a href="https://kitchen.keepnote.shop" style="font-size: 0.9rem; color: var(--color-accent); font-weight: 600; text-decoration: none;">더 알아보기 &rarr;</a>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="t-ico-caz5">
+            <div>
+                <p style="font-family: var(--font-serif); color: var(--color-surface); font-size: 1.2rem; margin-bottom: 10px;">KITCHEN NOTE</p>
+                <p>실무자를 위한 식자재 보관 및 위생 관리 저널</p>
+            </div>
+            <div>
+                <p style="margin-bottom: 10px;">Quick Links</p>
+                <p><a href="https://kitchen.keepnote.shop">개인정보처리방침</a> | <a href="https://kitchen.keepnote.shop">이용약관</a></p>
+            </div>
+        </div>
+        <div class="t-ico-caz5" style="margin-top: 30px; border-top: 1px solid #333; padding-top: 20px; font-size: 0.8rem;">
+            <p>&copy; 2024 Kitchen Keepnote. All rights reserved. 본 사이트의 콘텐츠는 무단 복제를 금합니다.</p>
+        </div>
+    </footer>
+
+    <!-- Simple Menu Toggle Script -->
+    <script>
+        function toggleMenu() {
+            const overlay = document.getElementById('mobileOverlay');
+            if (overlay.style.display === 'block') {
+                overlay.style.display = 'none';
+            } else {
+                overlay.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kitchen.keepnote.shop/sitemap.xml
+Sitemap: https://kitchen.keepnote.shop/sitemap-pages.xml

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실전 식품 보관 실패 사례 분석 — 실무자를 위한 팩트 가이드</title>
+    <meta name="description" content="이론만 아는 이들을 위한 실전 식품 보관 조건 정리. 대규모 행사 잔여 음식, 장마철 건어물, 정전 시 대처법 등 실제 현장에서 발생하는 부패 사례와 과학적 팩트를 다룹니다.">
+    <meta name="keywords" content="식품 보관 조건 정리, 식자재 보관 기준, 냉장 보관 오류, 부패 사례, 교차 오염, 대용량 식재료 보관">
+    <link rel="canonical" href="https://kitchen.keepnote.shop/blog-4.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="실전 식품 보관 실패 사례 분석 — 실무자를 위한 팩트 가이드">
+    <meta property="og:description" content="이론만 아는 이들을 위한 실전 식품 보관 조건 정리. 대규모 행사 잔여 음식, 장마철 건어물, 정전 시 대처법 등 실제 현장에서 발생하는 부패 사례와 과학적 팩트를 다룹니다.">
+    <meta property="og:url" content="https://kitchen.keepnote.shop/blog-4.html">
+
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #fcfbf9;
+            --bg-secondary: #f5f2eb;
+            --text-primary: #1c1c1c;
+            --text-muted: #5a5752;
+            --accent-color: #8c765c;
+            --border-color: #e3dec3;
+            --font-serif: "Times New Roman", "Noto Serif KR", serif;
+            --font-sans: "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+            --max-width: 1100px;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout & Structure */
+        .t-ico-caz5 {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Navigation */
+        .v-head-3tjb {
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .t-item-hzph-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .q-img-spda {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            text-decoration: none;
+            color: var(--text-primary);
+            text-transform: uppercase;
+        }
+
+        .v-img-adfh {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .v-img-adfh a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .v-img-adfh a:hover,
+        .v-img-adfh a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hamburger Menu (Mobile) */
+        .hamburger-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-primary);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Editorial Layout - Hero */
+        .hero-section {
+            padding: 100px 0 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-meta {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 1.15;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            word-break: keep-all;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* Editorial Split Grid */
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 60px;
+            padding: 60px 0;
+        }
+
+        .sidebar-panel {
+            position: sticky;
+            top: 140px;
+            height: fit-content;
+        }
+
+        .sidebar-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            border-bottom: 2px solid var(--text-primary);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 14px;
+        }
+
+        .sidebar-list a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .sidebar-list a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Article Content */
+        .article-body {
+            max-width: 720px;
+        }
+
+        .case-block {
+            margin-bottom: 80px;
+        }
+
+        .case-number {
+            font-family: var(--font-serif);
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .case-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .case-meta-box {
+            background-color: var(--bg-secondary);
+            border-left: 3px solid var(--accent-color);
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .case-meta-box p {
+            margin-bottom: 6px;
+        }
+
+        .case-meta-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .case-meta-box strong {
+            color: var(--accent-color);
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #2c2c2c;
+            text-align: justify;
+        }
+
+        .article-body p strong {
+            color: var(--text-primary);
+        }
+
+        /* Callout Box */
+        .fact-check-box {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0;
+        }
+
+        .fact-check-title {
+            font-family: var(--font-serif);
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .fact-check-box p {
+            color: #cccccc;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Table Style */
+        .data-table-wrapper {
+            margin: 40px 0;
+            overflow-x: auto;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .data-table th {
+            border-bottom: 2px solid var(--text-primary);
+            padding: 12px 8px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .data-table td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 8px;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        .footer-section {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0;
+            margin-top: 100px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Overlay Menu (Mobile) */
+        .m-side-02b7-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-primary);
+            z-index: 99;
+            padding: 100px 24px 24px 24px;
+        }
+
+        .m-side-02b7-overlay.active {
+            display: block;
+        }
+
+        .m-side-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .m-side-links a {
+            text-decoration: none;
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--text-primary);
+        }
+
+        /* Responsive 768 */
+        @media (max-width: 768px) {
+            .v-img-adfh {
+                display: none;
+            }
+
+            .hamburger-btn {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.3rem;
+            }
+
+            .editorial-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .sidebar-panel {
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="v-head-3tjb">
+        <div class="t-ico-caz5 t-item-hzph-container">
+            <a href="/" class="q-img-spda">KITCHEN NOTE</a>
+            <nav>
+                <ul class="v-img-adfh">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/guide">보관 가이드</a></li>
+                    <li><a href="/cases" class="active">실패 사례 분석</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-btn" onclick="toggleMenu()" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Overlay Menu -->
+    <div class="m-side-02b7-overlay" id="mobileMenu">
+        <ul class="m-side-links">
+            <li><a href="/" onclick="toggleMenu()">홈</a></li>
+            <li><a href="/guide" onclick="toggleMenu()">보관 가이드</a></li>
+            <li><a href="/cases" onclick="toggleMenu()">실패 사례 분석</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="t-ico-caz5">
+            <div class="hero-meta">Case Studies &amp; Real Disasters</div>
+            <h1 class="hero-title">이론과 현실의 괴리:<br>식품 보관 실패가 일어나는 진짜 이유</h1>
+            <p class="hero-desc">
+                책에 적힌 "냉장 4도 이하"를 몰라서 식중독이 터질까요? 아닙니다. 실제 현장에서 일어나는 미적지근한 타협과 안일한 판단이 원인입니다. 가장 빈번하게 발생하는 5가지 실패 사례를 과학적으로 해부합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Content Grid -->
+    <main class="t-ico-caz5 editorial-grid">
+        <!-- Left Sidebar Navigation for Quick Link -->
+        <aside class="sidebar-panel">
+            <h3 class="sidebar-title">분석 목차</h3>
+            <ul class="sidebar-list">
+                <li><a href="#case1">Case 1. 대용량 육류의 중심부 방치</a></li>
+                <li><a href="#case2">Case 2. 습도 간과한 건어물 보관</a></li>
+                <li><a href="#case3">Case 3. 정전 이후의 안일한 재냉동</a></li>
+                <li><a href="#case4">Case 4. 채소와 생닭의 교차 오염</a></li>
+                <li><a href="#case5">Case 5. 소스류 소분 보관의 치명타</a></li>
+            </ul>
+        </aside>
+
+        <!-- Right Main Content -->
+        <section class="article-body">
+            
+            <!-- Intro Paragraphs -->
+            <p>
+                인터넷에 널려 있는 뻔한 표들, 다들 보셨을 겁니다. 냉장고 온도는 몇 도, 냉동고 온도는 몇 도. 초등학생도 외울 법한 숫자놀음이죠. 하지만 실제 대규모 행사 현장이나 바쁜 업장 주방에서 일해본 사람들은 압니다. 그 숫자가 얼마나 무력하게 무너지는지 말입니다. 
+            </p>
+            <p>
+                문제는 지식의 부족이 아니라 <strong>상황에 대한 오판</strong>입니다. "잠깐은 괜찮겠지", "겉이 차가우니까 다 식었겠지" 하는 주관적 느낌이 과학적 법칙을 이길 순 없습니다. 오늘 정리해 드리는 사례들은 제가 현장에서 직접 보고 기가 찼던, 하지만 누구나 한 번쯤 저지르는 전형적인 실패의 기록들입니다. 팩트만 짚고 넘어갈 테니, 본인의 작업 환경은 안전한지 짚어보시길 바랍니다.
+            </p>
+
+            <!-- Case 1 -->
+            <div class="case-block" id="case1">
+                <span class="case-number">CASE 01</span>
+                <h2 class="case-title">대용량 육류 조리 후 "천천히 식히기"의 참사</h2>
+                
+                <div class="case-meta-box">
+                    <p><strong>발생 상황:</strong> 대규모 연회용 갈비찜 50인분 사전 조리 후 냉장 보관</p>
+                    <p><strong>실패 요인:</strong> 뜨거운 상태로 대형 용기째 냉장고 직행, 중심부 온도 미확인</p>
+                </div>
+
+                <p>
+                    행사 전날 대량의 갈비찜을 조리한 뒤, 주방 담당자는 "상온에 두면 상하니까 바로 냉장고에 넣어야겠다"며 깊이 30cm가 넘는 대형 스텐 용기 통째로 냉장고에 밀어 넣었습니다. 이론적으로는 냉장고 내부 온도가 3도였으니 완벽한 보관 조건이라 믿었겠죠. 하지만 다음 날 행사장에서 꺼낸 갈비찜 중심부에서는 미세한 가스 냄새와 함께 산패가 진행되어 있었습니다.
+                </p>
+                <p>
+                    이유는 단순한 열역학 법칙 때문입니다. 대용량의 뜨거운 액체와 고기는 냉장고에 들어가도 중심부까지 냉기가 도달하는 데 엄청난 시간이 걸립니다. 냉장고 센서는 내부 공기 온도가 낮아지면 컴프레셔 작동을 멈추거나 줄이지만, 깊은 용기 한가운데의 온도는 여전히 섭씨 30~40도 부근에서 머물게 됩니다. 이 구간은 세균이 가장 폭발적으로 증식하는 이른바 <strong>'온도 위험대(Danger Zone, 4℃~60℃)'</strong>입니다. 냉장고 안에서 음식이 스스로 썩어간 셈이죠. 반드시 얕은 용기에 소분하여 얼음조에서 급속 냉각(Chilling) 후 냉장고에 넣었어야 합니다.
+                </p>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="case-block" id="case2">
+                <span class="case-number">CASE 02</span>
+                <h2 class="case-title">습한 장마철, "건조 식품이니까 괜찮다"는 맹신</h2>
+                
+                <div class="case-meta-box">
+                    <p><strong>발생 상황:</strong> 한여름 장마철, 육수용 다시마와 멸치 다용도실 보관</p>
+                    <p><strong>실패 요인:</strong> 상대 습도 85% 이상 환경에서의 밀봉 미비</p>
+                </div>
+
+                <p>
+                    수분 함량이 낮은 건조 식품은 미생물이 자라기 어렵다는 것이 일반적인 식품 보관 조건 정리의 정설입니다. 맞는 말입니다. 수분 활성도(Water Activity)가 낮으면 곰팡이도 번식을 못 하니까요. 하지만 이건 '완벽하게 건조된 상태가 유지될 때'의 이야기입니다. 장마철 다용도실의 상대 습도는 쉽게 90%를 넘나듭니다.
+                </p>
+                <p>
+                    멸치와 다시마를 대충 비닐봉지 입구만 묶어서 선반에 던져두면, 이 건조한 식재료들은 주변의 수분을 스펀지처럼 빨아들입니다. 내부 수분 활성도가 임계점을 넘는 순간, 눈에 보이지 않던 곰팡이 포자가 활동을 시작하죠. 겉보기엔 멀쩡해 보여도 이미 독소를 내뿜기 시작한 상태입니다. 건조 식품이라도 고온 다습한 계절에는 무조건 밀폐 용기에 제습제(실리카겔)와 함께 넣거나, 아예 냉동 보관하는 것이 유일한 해결책입니다. 방심은 곧 폐기로 이어집니다.
+                </p>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="case-block" id="case3">
+                <span class="case-number">CASE 03</span>
+                <h2 class="case-title">갑작스러운 정전 후 "아까우니까 다시 얼리기"</h2>
+                
+                <div class="case-meta-box">
+                    <p><strong>발생 상황:</strong> 야간 정전으로 인해 냉동고 온도가 영하 2도까지 상승</p>
+                    <p><strong>실패 요인:</strong> 해동된 육류 및 해산물의 무분별한 재냉동</p>
+                </div>
+
+                <p>
+                    새벽 시간 건물 전력 점검이나 낙뢰로 인해 약 6시간 동안 냉동고가 꺼졌습니다. 출근한 담당자가 확인해 보니 냉동고 안의 고기들이 서서히 녹아 말랑해진 상태였습니다. 온도는 영하 2도 수준. 버리기엔 아깝고 아직 차가우니까 전원을 다시 켜서 급속 냉동을 시켰습니다. 겉보기엔 다시 꽁꽁 얼었으니 안전해 보였을 겁니다.
+                </p>
+                <p>
+                    이것이 식중독 사고의 전형적인 시발점입니다. 한 번 해동된 식품의 세포막은 이미 파괴되어 다량의 드립(Drip, 육즙)이 흘러나온 상태입니다. 이 육즙은 미생물에게 최고의 영양 공급원입니다. 게다가 서서히 녹는 과정에서 표면 온도는 이미 온도 위험대에 노출되었을 가능성이 큽니다. 이를 다시 얼리면 미생물이 죽을까요? 아닙니다. 미생물은 냉동 상태에서 죽지 않고 단지 활동을 일시 정지할 뿐입니다. 다시 해동해서 조리할 때, 이들은 폭발적으로 증식하여 치명적인 식중독을 유발합니다. 완전히 녹은 고위험군 식재료(육류, 패류)는 미련 없이 폐기하는 것이 업장을 살리는 길입니다.
+                </p>
+            </div>
+
+            <!-- Case 4 -->
+            <div class="case-block" id="case4">
+                <span class="case-number">CASE 04</span>
+                <h2 class="case-title">냉장고 내부의 무법 지대, 교차 오염의 정석</h2>
+                
+                <div class="case-meta-box">
+                    <p><strong>발생 상황:</strong> 샐러드용 채소 바로 아래 칸에 생닭 보관</p>
+                    <p><strong>실패 요인:</strong> 적재 순서 무시로 인한 교차 오염</p>
+                </div>
+
+                <p>
+                    냉장고 내부 온도를 3도로 유지했으니 완벽하다고 자부하는 주방이 있었습니다. 하지만 그 냉장고 안을 들여다보니, 맨 위 칸에는 씻어둔 샐러드용 양상추가 있었고, 바로 아래 칸에는 핏물이 살짝 고인 생닭 박스가 놓여 있었습니다. 생닭에서 흘러나온 미세한 핏물 한 방울이 아래 칸의 채소 위로 떨어지는 순간, 그 채소는 캄필로박터균과 살모넬라균의 온상이 됩니다.
+                </p>
+                <p>
+                    채소는 가열 조리 없이 바로 손님 입으로 들어가는 <strong>'즉석 섭취 식품'</strong>입니다. 반면 생닭은 반드시 가열해야 하는 고위험 식재료입니다. 냉장고 내부를 정리할 때는 반드시 가열 조리하지 않는 식품을 가장 위 칸에, 생고기나 생선처럼 핏물이나 액체가 흐를 수 있는 식재료는 가장 아래 칸에 배치해야 합니다. 이것은 식품 보관 조건 정리의 기초 중의 기초이며, 이를 어기는 것은 위생 관념이 전무하다는 방증입니다.
+                </p>
+            </div>
+
+            <!-- Fact Check Box -->
+            <div class="fact-check-box">
+                <h3 class="fact-check-title">팩트 폭력: 냉장고는 살균기가 아닙니다</h3>
+                <p>
+                    많은 이들이 냉장고에만 들어가면 식품의 시간이 멈추는 줄 압니다. 냉장 온도는 미생물의 증식 속도를 '지연'시킬 뿐, 완전히 멈추지 못합니다. 리스테리아균 같은 저온성 세균은 4도 이하에서도 서서히 증식하여 치명적인 패혈증을 유발합니다. 냉장고 과신증을 버리십시오.
+                </p>
+            </div>
+
+            <!-- Case 5 -->
+            <div class="case-block" id="case5">
+                <span class="case-number">CASE 05</span>
+                <h2 class="case-title">소스류 소분 보관 시 날짜 표기 누락</h2>
+                
+                <div class="case-meta-box">
+                    <p><strong>발생 상황:</strong> 대용량 마요네즈 베이스 소스를 소형 통에 나누어 담아 보관</p>
+                    <p><strong>실패 요인:</strong> 최초 개봉일 및 소분일 미표기로 인한 장기 방치</p>
+                </div>
+
+                <p>
+                    업소용 대용량 드레싱이나 소스를 구매해 작은 소분 용기에 나누어 담아 사용하는 것은 흔한 일입니다. 문제는 소분하면서 원래 제품 용기에 적혀 있던 유통기한 정보가 완전히 사라진다는 점입니다. "우리는 회전율이 빨라서 금방 쓴다"고 변명하지만, 구석에 박힌 소분 용기 하나는 한 달이 지나도 그대로 방치되기 일쑤입니다.
+                </p>
+                <p>
+                    특히 계란 노른자가 들어간 마요네즈 계열 소스나 수분 함량이 높은 수제 소스는 공기와 접촉하는 순간부터 급격히 산패가 진행됩니다. 소분할 때는 용기 표면에 반드시 <strong>[원래 제품 유통기한 / 소분한 날짜 / 소분 담당자]</strong>를 명확히 기재해야 합니다. 겉보기에 멀쩡하고 냄새가 안 난다고 안전한 것이 아닙니다. 상식적으로 사람이 맡는 냄새로 미생물 수치를 측정할 수 있다면 위생 검사 장비가 왜 존재하겠습니까?
+                </p>
+            </div>
+
+            <!-- Reference Table -->
+            <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 20px;">현장 실무자를 위한 핵심 보관 조건 가이드</h3>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>식재료 유형</th>
+                            <th>적정 보관 온도</th>
+                            <th>최대 보관 기한</th>
+                            <th>실무 핵심 수칙</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>다짐육 (우육/돈육)</td>
+                            <td>-2℃ ~ 2℃ (신선실)</td>
+                            <td>1~2일 이내</td>
+                            <td>표면적이 넓어 부패 속도 극도로 빠름. 즉시 사용 권장.</td>
+                        </tr>
+                        <tr>
+                            <td>생닭 및 가금류</td>
+                            <td>0℃ ~ 2℃</td>
+                            <td>2일 이내</td>
+                            <td>핏물 낙하 방지를 위해 냉장고 최하단에 배치.</td>
+                        </tr>
+                        <tr>
+                            <td>조리된 반찬/국</td>
+                            <td>4℃ 이하</td>
+                            <td>3~4일 이내</td>
+                            <td>깊이 10cm 이하의 얕은 용기에 담아 급속 냉각 후 보관.</td>
+                        </tr>
+                        <tr>
+                            <td>세척 완료 채소</td>
+                            <td>4℃ ~ 10℃</td>
+                            <td>3일 이내</td>
+                            <td>물기 완전히 제거 후 밀폐 용기 보관 (물기 있으면 무름).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                결국 완벽한 식품 보관 조건 정리라는 것은 대단한 과학 기술이 아닙니다. 귀찮음을 이겨내는 시스템과 룰을 지키는 고집에서 나옵니다. "이 정도면 되겠지"라는 안일한 생각이 드는 순간, 그 식자재는 이미 쓰레기통으로 갈 준비를 하고 있는 겁니다. 여러분의 주방 온계는 지금 몇 도를 가리키고 있습니까?
+            </p>
+
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="t-ico-caz5">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">KITCHEN NOTE</div>
+                    <p style="max-width: 400px; line-height: 1.6;">
+                        실무 담당자를 위한 날카롭고 객관적인 식품 위생 및 보관 정보 아카이브. 감상주의를 배제하고 오직 과학적 팩트와 현장 데이터만 전달합니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: 16px; font-family: var(--font-serif);">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">홈</a></li>
+                        <li><a href="/guide">보관 가이드</a></li>
+                        <li><a href="/cases">실패 사례 분석</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: 16px; font-family: var(--font-serif);">Legal</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.6;">
+                        본 사이트의 콘텐츠는 식품 위생법 및 공인 위생 가이드를 바탕으로 작성되었으나, 개별 현장의 환경에 따라 세부 수치는 달라질 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kitchen Note. All rights reserved.</p>
+                <p>Designed for Professional Kitchens</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            
+            // Hamburger icon animation effect if needed
+            const btn = document.querySelector('.hamburger-btn');
+            btn.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

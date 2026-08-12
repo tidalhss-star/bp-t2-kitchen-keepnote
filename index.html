@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>식품 보관 조건 정리 — 대규모 행사를 위한 실무자용 보관 가이드</title>
+    <meta name="description" content="실무 담당자를 위한 식품 보관 조건 정리 가이드. 실온, 냉장, 냉동의 명확한 기준과 보관 실패 신호, 대규모 행사 준비 시 식자재 관리 프로토콜을 상세히 알아봅니다.">
+    <meta name="keywords" content="식품 보관 조건 정리, 식자재 보관 기준, 냉장 보관 온도, 실온 보관 기준, 부패 신호, 행사 식자재 관리">
+    <link rel="canonical" href="https://kitchen.keepnote.shop/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="식품 보관 조건 정리 — 대규모 행사를 위한 실무자용 보관 가이드">
+    <meta property="og:description" content="실무 담당자를 위한 식품 보관 조건 정리 가이드. 실온, 냉장, 냉동의 명확한 기준과 보관 실패 신호, 대규모 행사 준비 시 식자재 관리 프로토콜을 상세히 알아봅니다.">
+    <meta property="og:url" content="https://kitchen.keepnote.shop/">
+    <meta property="og:site_name" content="식품 보관 조건 정리 노트">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="식품 보관 조건 정리 — 대규모 행사를 위한 실무자용 보관 가이드">
+    <meta name="twitter:description" content="실온, 냉장, 냉동의 경계선과 실무 현장에서 놓치기 쉬운 부패 신호 및 대응 프로세스를 완벽하게 정리했습니다.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #1a1a1a;
+            --color-bg: #121212;
+            --color-text: #fafaf5;
+            --color-text-muted: #a0a095;
+            --color-accent: #366e2b;
+            --color-glass: rgba(255, 255, 255, 0.03);
+            --color-glass-border: rgba(255, 255, 255, 0.08);
+            --font-serif: 'Playfair Display', 'Noto Serif KR', serif;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+            overflow-x: hidden;
+        }
+
+        /* Layout & Structure */
+        .t-ico-caz5 {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Navigation */
+        .v-img-adfh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-glass-border);
+        }
+
+        .t-item-hzph-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .q-img-spda {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-text);
+            text-decoration: none;
+        }
+
+        .v-head-3tjb {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 16px;
+            z-index: 1002;
+        }
+
+        .v-head-3tjb span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+
+        /* Overlay Menu */
+        .m-side-02b7-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-bg);
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        .m-side-02b7-overlay.active {
+            opacity: 0.98;
+            visibility: visible;
+        }
+
+        .m-side-02b7-links {
+            list-style: none;
+            text-align: center;
+        }
+
+        .m-side-02b7-links li {
+            margin: 32px 0;
+        }
+
+        .m-side-02b7-links a {
+            font-size: 2rem;
+            color: var(--color-text);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+        }
+
+        .m-side-02b7-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero Section */
+        .v-side-125p {
+            padding: 180px 0 100px 0;
+            position: relative;
+        }
+
+        .v-side-125p-badge {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-accent);
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        /* Handcrafted Indie Accent: Tilted Title & Custom Underline */
+        .k-nav-ofag-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            line-height: 1.2;
+            font-weight: 400;
+            margin-bottom: 32px;
+            transform: rotate(-1.2deg);
+            display: inline-block;
+            transform-origin: left center;
+        }
+
+        .x-img-76wy-line {
+            display: block;
+            width: 100%;
+            max-width: 450px;
+            height: 2px;
+            border-bottom: 2px dashed var(--color-accent);
+            margin-top: 16px;
+        }
+
+        .v-side-125p-desc {
+            font-size: 1.15rem;
+            color: var(--color-text-muted);
+            max-width: 680px;
+            margin-top: 40px;
+        }
+
+        /* Asymmetric Layout Sections */
+        .k-card-scey {
+            padding: 80px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        /* Asymmetric padding to mimic handcrafted imperfection */
+        .x-list-932g-left {
+            padding-left: 5%;
+            padding-right: 15%;
+        }
+
+        .x-list-932g-right {
+            padding-left: 15%;
+            padding-right: 5%;
+        }
+
+        .k-card-scey-title {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            color: var(--color-text);
+            position: relative;
+        }
+
+        .k-card-scey-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            background-color: var(--color-accent);
+            margin-top: 12px;
+        }
+
+        /* Glassmorphism Cards */
+        .m-txt-25cm-card {
+            background: var(--color-glass);
+            border: 1px solid var(--color-glass-border);
+            padding: 40px;
+            border-radius: 4px;
+            margin-bottom: 32px;
+            transition: border-color 0.3s;
+        }
+
+        .m-txt-25cm-card:hover {
+            border-color: var(--color-accent);
+        }
+
+        .k-wrap-gm74-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .k-wrap-gm74-title {
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        /* Text Styles */
+        p {
+            margin-bottom: 24px;
+            color: var(--color-text-muted);
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        p strong {
+            color: var(--color-text);
+        }
+
+        /* Sharp Buttons */
+        .v-main-ymz5 {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--color-text);
+            border: 1px solid var(--color-text);
+            padding: 14px 28px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 4px; /* subtle as per layout rules */
+        }
+
+        .v-main-ymz5:hover {
+            background-color: var(--color-text);
+            color: var(--color-bg);
+        }
+
+        /* Table Style */
+        .r-img-5rld-wrapper {
+            overflow-x: auto;
+            margin: 40px 0;
+        }
+
+        .r-img-5rld {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .r-img-5rld th, .r-img-5rld td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--color-glass-border);
+        }
+
+        .r-img-5rld th {
+            font-weight: 600;
+            color: var(--color-text);
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .r-img-5rld td {
+            color: var(--color-text-muted);
+        }
+
+        /* FAQ Accordion */
+        .v-card-umiw-item {
+            border-bottom: 1px solid var(--color-glass-border);
+            padding: 24px 0;
+        }
+
+        .v-card-umiw-trigger {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            color: var(--color-text);
+            font-size: 1.15rem;
+            font-family: var(--font-serif);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .v-card-umiw-content {
+            margin-top: 16px;
+            color: var(--color-text-muted);
+            display: none;
+            padding-right: 40px;
+        }
+
+        .v-card-umiw-item.active .v-card-umiw-content {
+            display: block;
+        }
+
+        .v-card-umiw-icon {
+            transition: transform 0.3s;
+        }
+
+        .v-card-umiw-item.active .v-card-umiw-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Author Block */
+        .t-body-psrd-section {
+            background: var(--color-glass);
+            border-top: 1px solid var(--color-glass-border);
+            padding: 60px 0;
+            margin-top: 80px;
+        }
+
+        .t-body-psrd-card {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .t-body-psrd-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .t-body-psrd-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-accent);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-text);
+        }
+
+        .t-body-psrd-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--color-text);
+        }
+
+        .t-body-psrd-info p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .r-side-o7qp {
+            padding: 48px 0;
+            border-top: 1px solid var(--color-glass-border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            letter-spacing: 0.1em;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .v-side-125p {
+                padding: 120px 0 60px 0;
+            }
+            .x-list-932g-left, .x-list-932g-right {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .k-card-scey {
+                padding: 48px 0;
+            }
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://kitchen.keepnote.shop/#organization",
+          "name": "식품 보관 조건 정리 노트",
+          "url": "https://kitchen.keepnote.shop",
+          "logo": "https://kitchen.keepnote.shop/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://kitchen.keepnote.shop/#webpage",
+          "url": "https://kitchen.keepnote.shop",
+          "name": "식품 보관 조건 정리 — 대규모 행사를 위한 실무자용 보관 가이드",
+          "description": "실무 담당자를 위한 식품 보관 조건 정리 가이드. 실온, 냉장, 냉동의 명확한 기준과 보관 실패 신호, 대규모 행사 준비 시 식자재 관리 프로토콜을 상세히 알아봅니다.",
+          "isPartOf": {
+            "@id": "https://kitchen.keepnote.shop/#organization"
+          },
+          "about": {
+            "@id": "https://kitchen.keepnote.shop/#about"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://kitchen.keepnote.shop/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "냉장과 실온 보관을 구분하는 가장 핵심적인 기준은 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "식품의 수분 활성도와 단백질 함량입니다. 수분이 많고 단백질이 풍부한 식품은 미생물 번식이 쉬워 반드시 10°C 이하의 냉장 보관이 필요하며, 건조하거나 당도/염도가 극도로 높은 식품은 실온 보관이 가능합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "행사장 현장에서 식자재 변질을 빠르게 확인하는 방법은 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "포장지의 불필요한 팽창 여부, 표면의 진액 발생 및 끈적임 현상, 그리고 시큼하거나 평소와 다른 냄새를 확인해야 합니다. 특히 냉동 제품의 경우 성에가 많이 끼어 있다면 중간에 해동되었다가 재냉동된 신호이므로 사용을 지양해야 합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "남은 행사용 식자재의 정산 및 반품 기준은 어떻게 세워야 하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "공급업체와 사전에 '미개봉 콜드체인 유지 제품'에 한해 반품이 가능하다는 조항을 명시해야 합니다. 온도가 한 번이라도 실온으로 이탈한 제품은 전량 폐기 또는 현장 소진을 원칙으로 삼아야 안전합니다."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://kitchen.keepnote.shop/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "홈",
+              "item": "https://kitchen.keepnote.shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "식품 보관 조건 정리"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="m-main-la5o">
+
+    <!-- Header & Navigation -->
+    <header class="v-img-adfh">
+        <div class="t-item-hzph-container">
+            <a href="/" class="q-img-spda">Keepnote Kitchen</a>
+            <button class="v-head-3tjb" aria-label="메뉴 열기" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Overlay Menu -->
+    <nav class="m-side-02b7-overlay" id="menuOverlay">
+        <ul class="m-side-02b7-links">
+            <li><a href="#standards" class="menu-link">보관 기준</a></li>
+            <li><a href="#spoilage" class="menu-link">부패 신호</a></li>
+            <li><a href="#checklist" class="menu-link">실무 체크리스트</a></li>
+            <li><a href="#faq" class="menu-link">자주 묻는 질문</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="t-body-238w">
+        
+        <!-- Hero Section -->
+        <section class="v-side-125p">
+            <div class="t-ico-caz5">
+                <span class="v-side-125p-badge">Catering & Food Safety Guide</span>
+                <h1 class="k-nav-ofag-title">
+                    식품 보관 조건 정리
+                    <span class="x-img-76wy-line"></span>
+                </h1>
+                <p class="v-side-125p-desc">
+                    수많은 인원이 참석하는 대규모 행사를 준비할 때, 식자재 보관의 실수는 곧 행사 전체의 실패로 이어집니다. 
+                    여러 업체의 견적을 비교하고 계신 담당자라면, 단순 단가를 넘어 현장에서 완벽하게 제어할 수 있는 보관 조건과 
+                    식자재 변질의 신호를 즉각적으로 식별하는 매뉴얼을 반드시 확보하셔야 합니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 1: 실온 vs 냉장 vs 냉동의 명확한 경계선 -->
+        <section id="standards" class="k-card-scey x-list-932g-left">
+            <div class="t-ico-caz5">
+                <h2 class="k-card-scey-title">01. 온도대별 식품 보관 조건 정리</h2>
+                <p>
+                    식자재 보관의 기본은 물리적 온도의 경계를 명확히 이해하는 것에서 출발합니다. 
+                    단순히 '차가운 곳에 둔다'는 모호한 기준으로는 행사 당일의 대량 보관 상황을 감당할 수 없습니다. 
+                    실온(15~25°C), 냉장(0~10°C), 냉동(-18°C 이하)은 미생물의 번식을 차단하고 식자재 고유의 물리적 손상을 
+                    막기 위한 최소한의 안전선입니다.
+                </p>
+                <span aria-hidden="true" data-t="fa39b2c1" style="display:none;">●</span>
+                <p>
+                    특히 다수의 공급업체를 비교 중인 준비 담당자라면, 배송 시점부터 행사 서빙 직전까지의 콜드체인이 
+                    어떻게 연동되는지 체크해야 합니다. 실온 제품이라 하더라도 계절적 요인으로 행사장 내부 온도가 상승하면 
+                    미생물 증식 속도가 기하급수적으로 빨라집니다. 냉동 제품 역시 해동 과정에서 급격한 수분 손실(드립 현상)과 
+                    함께 부패가 시작되므로, 냉장 해동을 위한 물리적 공간과 리드타임 확보가 필수적입니다.
+                </p>
+
+                <div class="r-img-5rld-wrapper">
+                    <table class="r-img-5rld">
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>표준 관리 온도</th>
+                                <th>적용 주요 품목</th>
+                                <th>실무 관리 포인트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>실온 (Room Temp)</strong></td>
+                                <td>15°C ~ 25°C</td>
+                                <td>통조림, 건조식품, 소스류, 구근류</td>
+                                <td>직사광선 차단, 습도 60% 이하 유지</td>
+                            </tr>
+                            <tr>
+                                <td><strong>냉장 (Refrigerated)</strong></td>
+                                <td>0°C ~ 10°C (권장 5°C 이하)</td>
+                                <td>신선육, 어패류, 유제품, 신선채소</td>
+                                <td>차량 하차 즉시 전용 냉장고 입고</td>
+                            </tr>
+                            <tr>
+                                <td><strong>냉동 (Frozen)</strong></td>
+                                <td>-18°C 이하</td>
+                                <td>육가공품, 냉동 수산물, 얼음, 디저트</td>
+                                <td>성애 발생 여부 상시 모니터링</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 잘못된 보관이 보내는 위험 신호 -->
+        <section id="spoilage" class="k-card-scey x-list-932g-right">
+            <div class="t-ico-caz5">
+                <h2 class="k-card-scey-title">02. 육안과 후각으로 감지하는 부패의 신호</h2>
+                <p>
+                    현장에 도착한 식자재가 완벽한 상태인지 식별하는 것은 온전히 실무 담당자의 몫입니다. 
+                    이미 몇 군데의 업체를 비교해보셨겠지만, 보관 조건 이탈로 발생한 미세한 변질은 서빙 직전 데코레이션에 가려져 
+                    참석자에게 전달되기 쉽습니다. 이는 심각한 식중독 사고의 원인이 됩니다.
+                </p>
+                <span aria-hidden="true" data-t="7c8d9e0f" style="display:none;">○</span>
+                <p>
+                    가장 먼저 확인해야 할 신호는 <strong>수분과 점도의 변화</strong>입니다. 냉장 보관된 육류나 어패류의 표면이 
+                    끈적거리거나 진액 같은 점액질이 발생했다면, 이는 초기 부패가 상당히 진행된 상태입니다. 
+                    또한, 포장재가 풍선처럼 부풀어 오른 현상은 내부에서 혐기성 미생물이 가스를 배출하고 있다는 명확한 증거입니다. 
+                    냉동 제품의 경우, 제품 표면에 얼음 결정이나 성에가 두껍게 내려앉아 있다면 유통 과정 중 
+                    일시적인 해동 후 재냉동(Temperature Abuse)을 겪었음을 뜻하므로 즉각 반품 조치해야 합니다.
+                </p>
+
+                <div class="m-txt-25cm-card">
+                    <span class="k-wrap-gm74-num">Check Sign 01</span>
+                    <h3 class="k-wrap-gm74-title">육류 및 가공품의 변색</h3>
+                    <p>
+                        소고기의 갈색화(산소 차단에 의한 일시적 현상 제외)나 돼지고기의 회색조 변화, 닭고기 관절 부위의 검붉은 변색은 
+                        이미 산화 및 부패가 시작되었음을 알리는 강력한 시각적 신호입니다.
+                    </p>
+                </div>
+
+                <div class="m-txt-25cm-card">
+                    <span class="k-wrap-gm74-num">Check Sign 02</span>
+                    <h3 class="k-wrap-gm74-title">시큼하고 자극적인 이취 (Off-Odor)</h3>
+                    <p>
+                        우유나 치즈 등 유제품에서 느껴지는 시큼한 유기산 냄새, 수산물에서 풍기는 비정상적인 암모니아 취는 
+                        단백질 분해 효소가 작동해 식자재가 이미 붕괴했음을 의미합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 준비 담당자를 위한 3대 실무 수칙 -->
+        <section id="checklist" class="k-card-scey x-list-932g-left">
+            <div class="t-ico-caz5">
+                <h2 class="k-card-scey-title">03. 대규모 행사 시 식자재 관리 프로토콜</h2>
+                <p>
+                    행사 준비를 직접 진두지휘하는 실무자라면, 현장의 수많은 변수를 단일 통제선 안으로 끌어들여야 합니다. 
+                    여러 납품 업체를 조율하고 현장 스태프를 지휘할 때 아래의 세 가지 원칙을 고수하십시오.
+                </p>
+                
+                <div class="m-txt-25cm-card">
+                    <span class="k-wrap-gm74-num">Rule 01</span>
+                    <h3 class="k-wrap-gm74-title">소통 창구의 단일화 (Single Point of Contact)</h3>
+                    <p>
+                        행사장 내 식자재 입고 및 온도 조절 지시는 오직 지정된 PM(프로젝트 매니저) 한 사람을 통해서만 이루어져야 합니다. 
+                        여러 스태프가 개별적으로 운송 기사나 주방 인력에게 요구사항을 전달할 경우, 콜드체인 유지를 위한 
+                        정확한 입고 시점 타이밍을 놓쳐 식자재가 뜨거운 실온에 방치되는 참사가 발생합니다.
+                    </p>
+                </div>
+                <span aria-hidden="true" data-t="bc38d91a" style="display:none;">·</span>
+                <div class="m-txt-25cm-card">
+                    <span class="k-wrap-gm74-num">Rule 02</span>
+                    <h3 class="k-wrap-gm74-title">인원 변동에 따른 보관 예비율 설계</h3>
+                    <p>
+                        현장 참석자 수의 급작스러운 변동에 대비해, 전체 식자재의 10~15%는 '즉각 냉장/냉동 전환이 가능한 밀봉 패키지' 상태로 
+                        유지해야 합니다. 개봉 후 남겨진 식자재는 급격히 품질이 저하되므로, 소포장 분할 보관 방식을 공급업체에 
+                        사전 요구하는 것이 리스크를 최소화하는 방법입니다.
+                    </p>
+                </div>
+
+                <div class="m-txt-25cm-card">
+                    <span class="k-wrap-gm74-num">Rule 03</span>
+                    <h3 class="k-wrap-gm74-title">정산 및 잔여 식자재 회수 기준 확립</h3>
+                    <p>
+                        행사 종료 후 미개봉 식자재의 정산 기준을 사전에 확정해 두지 않으면 추후 큰 비용 갈등이 발생합니다. 
+                        '배송 시점부터 회수 시점까지 콜드체인(온도 기록계 데이터)이 증명된 미개봉 냉동 제품'에 한하여 반품 처리를 
+                        인정하는 등의 세부 기준을 계약서에 명시해야 정산 단계에서의 분쟁을 막을 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="k-card-scey x-list-932g-right">
+            <div class="t-ico-caz5">
+                <h2 class="k-card-scey-title">자주 묻는 질문 (FAQ)</h2>
+                
+                <div class="v-card-umiw-item">
+                    <button class="v-card-umiw-trigger">
+                        <span>Q1. 냉장과 실온 보관을 구분하는 가장 핵심적인 기준은 무엇인가요?</span>
+                        <span class="v-card-umiw-icon">+</span>
+                    </button>
+                    <div class="v-card-umiw-content">
+                        <p>
+                            식품의 수분 활성도와 단백질 함량입니다. 수분이 많고 단백질이 풍부한 식품은 미생물 번식이 쉬워 반드시 10°C 이하의 냉장 보관이 필요하며, 건조하거나 당도/염도가 극도로 높은 식품은 실온 보관이 가능합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-card-umiw-item">
+                    <button class="v-card-umiw-trigger">
+                        <span>Q2. 행사장 현장에서 식자재 변질을 빠르게 확인하는 방법은 무엇인가요?</span>
+                        <span class="v-card-umiw-icon">+</span>
+                    </button>
+                    <div class="v-card-umiw-content">
+                        <p>
+                            포장지의 불필요한 팽창 여부, 표면의 진액 발생 및 끈적임 현상, 그리고 시큼하거나 평소와 다른 냄새를 확인해야 합니다. 특히 냉동 제품의 경우 성에가 많이 끼어 있다면 중간에 해동되었다가 재냉동된 신호이므로 사용을 지양해야 합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-card-umiw-item">
+                    <button class="v-card-umiw-trigger">
+                        <span>Q3. 남은 행사용 식자재의 정산 및 반품 기준은 어떻게 세워야 하나요?</span>
+                        <span class="v-card-umiw-icon">+</span>
+                    </button>
+                    <div class="v-card-umiw-content">
+                        <p>
+                            공급업체와 사전에 '미개봉 콜드체인 유지 제품'에 한해 반품이 가능하다는 조항을 명시해야 합니다. 온도가 한 번이라도 실온으로 이탈한 제품은 전량 폐기 또는 현장 소진을 원칙으로 삼아야 안전합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- E-A-T Author Bio Section -->
+        <section class="t-body-psrd-section">
+            <div class="t-ico-caz5">
+                <div class="t-body-psrd-card">
+                    <div class="t-body-psrd-avatar">민우</div>
+                    <div class="t-body-psrd-info">
+                        <h4>푸드케어 디렉터 민우</h4>
+                        <p>
+                            서울 지역 대형 연회 및 F&B 행사에서 8년간 식자재 유통 및 콜드체인 검수를 전담해 온 실무형 가이드입니다. 
+                            완벽한 행사 준비를 위한 보관 매뉴얼과 정산 프로세스 정립을 돕고 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="r-side-o7qp">
+        <div class="t-ico-caz5">
+            <p style="margin-bottom: 8px; color: var(--color-text); font-weight: 600;">kitchen.keepnote.shop</p>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted);">© 2024 식품 보관 조건 정리 노트. All Rights Reserved. 본 페이지는 정보 제공용 블로그입니다.</p>
+        </div>
+    </footer>
+
+    <!-- Vanilla JS for Hamburger & Accordion -->
+    <script>
+        // Hamburger Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            
+            // Hamburger animation
+            const spans = menuToggle.querySelectorAll('span');
+            if (menuOverlay.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Close menu on link click
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOverlay.classList.remove('active');
+                const spans = menuToggle.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            });
+        });
+
+        // FAQ Accordion Toggle
+        const faqItems = document.querySelectorAll('.v-card-umiw-item');
+
+        faqItems.forEach(item => {
+            const trigger = item.querySelector('.v-card-umiw-trigger');
+            trigger.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                faqItems.forEach(i => i.classList.remove('active'));
+                
+                // Toggle clicked item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
